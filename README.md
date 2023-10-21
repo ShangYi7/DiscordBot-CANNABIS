@@ -8,7 +8,7 @@
 
   <h1 align="center">CANNABIS Bot</h1>
 
-  [CANNABIS](https://markdownlivepreview.com/).
+  [CANNABIS](https://discord.gg/5Y63SvNEEw).
 
   <p align="center">
     這是 Discord bot 用於幫助管理者可以更快管理,更多功能使用.
