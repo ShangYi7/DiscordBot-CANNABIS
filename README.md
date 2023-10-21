@@ -26,6 +26,7 @@
 - 腦袋
 
 ###  主要特點
+- JavaScript V14
 - Slash Commands “/” 
 - 基本指令：
    - ping 

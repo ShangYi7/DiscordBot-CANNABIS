@@ -1,0 +1,1697 @@
+[
+  null,
+  {
+    "name": "ping",
+    "permissions": "NONE",
+    "permissions2": "NONE",
+    "restriction": "1",
+    "_id": "Aszjg",
+    "actions": [
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "Pong!",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      }
+    ],
+    "comType": "4",
+    "description": "test"
+  },
+  {
+    "name": "ban",
+    "permissions": "ADMINISTRATOR",
+    "permissions2": "SEND_MESSAGES",
+    "restriction": "1",
+    "_id": "vcQqL",
+    "actions": [
+      {
+        "member": "5",
+        "varName": "user",
+        "info": "0",
+        "storage": "1",
+        "varName2": "member",
+        "name": "Store Member Info"
+      },
+      {
+        "member": "5",
+        "varName": "user",
+        "reason": "${slashParams(\"reason\")}",
+        "days": "",
+        "name": "Ban Member"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [
+          {
+            "title": "Ban",
+            "url": "",
+            "color": "#143540",
+            "timestamp": "false",
+            "imageUrl": "",
+            "thumbUrl": "",
+            "description": "${member} 剛剛禁止了 ${tempVars(\"member\")}\n原因: `${slashParams(\"reason\")}`",
+            "fields": [],
+            "author": "",
+            "authorUrl": "",
+            "authorIcon": "",
+            "footerText": "",
+            "footerIconUrl": ""
+          }
+        ],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      }
+    ],
+    "comType": "4",
+    "description": "禁止成員",
+    "parameters": [
+      {
+        "name": "user",
+        "description": "用戶將被禁止",
+        "type": "USER",
+        "required": true,
+        "choices": null
+      },
+      {
+        "name": "reason",
+        "description": "禁止原因",
+        "type": "STRING",
+        "required": true,
+        "choices": null
+      }
+    ]
+  },
+  {
+    "name": "unban",
+    "permissions": "ADMINISTRATOR",
+    "permissions2": "NONE",
+    "restriction": "1",
+    "_id": "nFtJV",
+    "actions": [
+      {
+        "member": "5",
+        "varName": "user",
+        "info": "0",
+        "storage": "1",
+        "varName2": "member",
+        "name": "Store Member Info"
+      },
+      {
+        "member": "5",
+        "varName": "user",
+        "reason": "",
+        "name": "Unban Member"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [
+          {
+            "title": "unban",
+            "url": "",
+            "color": "#143540",
+            "timestamp": "false",
+            "imageUrl": "",
+            "thumbUrl": "",
+            "description": "${member} 剛剛解禁了 ${tempVars(\"member\")}",
+            "fields": [],
+            "author": "",
+            "authorUrl": "",
+            "authorIcon": "",
+            "footerText": "",
+            "footerIconUrl": ""
+          }
+        ],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      }
+    ],
+    "comType": "4",
+    "description": "解除用戶禁止",
+    "parameters": [
+      {
+        "name": "user",
+        "description": "將被解封的用戶",
+        "type": "USER",
+        "required": true,
+        "choices": null
+      }
+    ]
+  },
+  {
+    "name": "kick",
+    "permissions": "ADMINISTRATOR",
+    "permissions2": "NONE",
+    "restriction": "1",
+    "_id": "kqiGc",
+    "actions": [
+      {
+        "member": "5",
+        "varName": "user",
+        "info": "0",
+        "storage": "1",
+        "varName2": "member",
+        "name": "Store Member Info"
+      },
+      {
+        "member": "5",
+        "varName": "user",
+        "reason": "${slashParams(\"reason\")}",
+        "name": "Kick Member"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [
+          {
+            "title": "KiCK",
+            "url": "",
+            "color": "#143540",
+            "timestamp": "false",
+            "imageUrl": "",
+            "thumbUrl": "",
+            "description": "${member} 剛剛踢除了 ${tempVars(\"member\")}\n原因: `${slashParams(\"reason\")}`",
+            "fields": [],
+            "author": "",
+            "authorUrl": "",
+            "authorIcon": "",
+            "footerText": "",
+            "footerIconUrl": ""
+          }
+        ],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      }
+    ],
+    "comType": "4",
+    "description": "踢除成員",
+    "parameters": [
+      {
+        "name": "user",
+        "description": "用戶將被踢除",
+        "type": "USER",
+        "required": true,
+        "choices": null
+      },
+      {
+        "name": "reason",
+        "description": "踢除原因",
+        "type": "STRING",
+        "required": true,
+        "choices": null
+      }
+    ]
+  },
+  {
+    "name": "mute",
+    "permissions": "ADMINISTRATOR",
+    "permissions2": "NONE",
+    "restriction": "1",
+    "_id": "OHQEP",
+    "actions": [
+      {
+        "member": "5",
+        "varName": "user",
+        "info": "0",
+        "storage": "1",
+        "varName2": "member",
+        "name": "Store Member Info"
+      },
+      {
+        "member": "5",
+        "varName": "user",
+        "time": "${slashParams(\"time\")}",
+        "reason": "${slashParams(\"reason\")}",
+        "name": "Timeout Member"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [
+          {
+            "title": "mute",
+            "url": "",
+            "color": "#143540",
+            "timestamp": "false",
+            "imageUrl": "",
+            "thumbUrl": "",
+            "description": "${member} 禁言了${tempVars(\"member\")}\n原因: `${slashParams(\"reason\")}`\n時間: `${slashParams(\"time\")}`秒",
+            "fields": [],
+            "author": "",
+            "authorUrl": "",
+            "authorIcon": "",
+            "footerText": "",
+            "footerIconUrl": ""
+          }
+        ],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      }
+    ],
+    "comType": "4",
+    "description": "禁言 (暫時)",
+    "parameters": [
+      {
+        "name": "user",
+        "description": "",
+        "type": "USER",
+        "required": true,
+        "choices": null
+      },
+      {
+        "name": "reason",
+        "description": "原因",
+        "type": "STRING",
+        "required": true,
+        "choices": null
+      },
+      {
+        "name": "time",
+        "description": "秒為單位",
+        "type": "INTEGER",
+        "required": true,
+        "choices": null
+      }
+    ]
+  },
+  {
+    "name": "clear",
+    "permissions": "ADMINISTRATOR",
+    "permissions2": "NONE",
+    "restriction": "1",
+    "_id": "OqqBO",
+    "actions": [
+      {
+        "channel": "0",
+        "count": "${slashParams(\"amount\")}",
+        "condition": "0",
+        "custom": "",
+        "varName": "",
+        "name": "Delete Bulk Messages"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [
+          {
+            "title": "Clear",
+            "url": "",
+            "color": "#143540",
+            "timestamp": "false",
+            "imageUrl": "",
+            "thumbUrl": "",
+            "description": "${member} 剛剛刪除了 ${slashParams(\"amount\")} 訊息",
+            "fields": [],
+            "author": "",
+            "authorUrl": "",
+            "authorIcon": "",
+            "footerText": "",
+            "footerIconUrl": ""
+          }
+        ],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      }
+    ],
+    "comType": "4",
+    "description": "刪除訊息",
+    "parameters": [
+      {
+        "name": "amount",
+        "description": "刪除數量",
+        "type": "STRING",
+        "required": true,
+        "choices": null
+      }
+    ]
+  },
+  {
+    "name": "ticket",
+    "permissions": "NONE",
+    "permissions2": "NONE",
+    "restriction": "1",
+    "_id": "fAPGQ",
+    "actions": [
+      {
+        "channel": "0",
+        "varName": "1072001263560048670",
+        "message": "",
+        "buttons": [],
+        "selectMenus": [
+          {
+            "placeholder": "🎫 Tickets",
+            "id": "msg-select-473d509",
+            "tempVarName": "ticket",
+            "row": "1",
+            "min": "1",
+            "max": "1",
+            "mode": "PERSISTENT",
+            "time": "90000",
+            "options": [
+              {
+                "label": "需要售後",
+                "description": "ticket1",
+                "value": "1",
+                "emoji": "😄",
+                "default": "false"
+              },
+              {
+                "label": "詢問問題",
+                "description": "ticket2",
+                "value": "2",
+                "emoji": "😘",
+                "default": "false"
+              },
+              {
+                "label": "購買商品",
+                "description": "ticket3",
+                "value": "3",
+                "emoji": "😘",
+                "default": "false"
+              }
+            ],
+            "actions": [
+              {
+                "storage": "1",
+                "varName": "ticket",
+                "comparison": "1",
+                "value": "1",
+                "branch": { "iftrue": "2", "iffalse": "0", "iftrueVal": "5" },
+                "name": "Check Variable"
+              },
+              {
+                "storage": "1",
+                "varName": "ticket",
+                "comparison": "1",
+                "value": "2",
+                "branch": { "iftrue": "2", "iffalse": "0", "iftrueVal": "13" },
+                "name": "Check Variable"
+              },
+              {
+                "storage": "1",
+                "varName": "ticket",
+                "comparison": "1",
+                "value": "3",
+                "branch": { "iftrue": "2", "iffalse": "0", "iftrueVal": "21" },
+                "name": "Check Variable"
+              },
+              { "name": "End Action Sequence" },
+              {
+                "server": "0",
+                "varName": "",
+                "dataName": "ticketnum1",
+                "defaultVal": "1",
+                "storage": "1",
+                "varName2": "ticketnum1",
+                "name": "Store Server Data"
+              },
+              {
+                "server": "0",
+                "varName": "",
+                "dataName": "ticketnum1",
+                "changeType": "1",
+                "value": "1",
+                "name": "Control Server Data"
+              },
+              {
+                "channelName": "需要售後-${tempVars(\"ticketnum1\")}",
+                "topic": "asasas",
+                "position": "",
+                "storage": "1",
+                "varName": "channel1",
+                "categoryID": "1072000859493388369",
+                "reason": "h",
+                "name": "Create Text Channel"
+              },
+              {
+                "storage": "3",
+                "varName": "channel1",
+                "permission": "VIEW_CHANNEL",
+                "state": "1",
+                "reason": "",
+                "name": "Set Channel Permissions"
+              },
+              {
+                "channel": "3",
+                "varName": "channel1",
+                "member": "1",
+                "varName2": "",
+                "permission": "VIEW_CHANNEL",
+                "state": "0",
+                "reason": "h",
+                "name": "Set Member Channel Perms"
+              },
+              {
+                "channel": "3",
+                "varName": "channel1",
+                "role": "101",
+                "varName2": "996261892483973170",
+                "permission": "VIEW_CHANNEL",
+                "state": "0",
+                "reason": "h",
+                "name": "Set Role Channel Perms"
+              },
+              {
+                "channel": "5",
+                "varName": "channel1",
+                "message": "",
+                "buttons": [
+                  {
+                    "name": "關閉",
+                    "type": "DANGER",
+                    "id": "msg-button-c171ca7",
+                    "row": "1",
+                    "url": "",
+                    "emoji": "",
+                    "mode": "PERSISTENT",
+                    "time": "30000",
+                    "actions": [
+                      {
+                        "channel": "0",
+                        "varName": "",
+                        "message": "你確定!?",
+                        "buttons": [
+                          {
+                            "name": "Yes",
+                            "type": "DANGER",
+                            "id": "msg-button-35f9e0b",
+                            "row": "1",
+                            "url": "",
+                            "emoji": "",
+                            "mode": "MULTI",
+                            "time": "",
+                            "actions": [
+                              {
+                                "storage": "0",
+                                "varName": "",
+                                "reason": "h",
+                                "name": "Delete Channel"
+                              }
+                            ]
+                          },
+                          {
+                            "name": "No",
+                            "type": "SUCCESS",
+                            "id": "msg-button-d4cf114",
+                            "row": "",
+                            "url": "",
+                            "emoji": "",
+                            "mode": "MULTI",
+                            "time": "",
+                            "actions": [
+                              {
+                                "channel": "0",
+                                "varName": "",
+                                "message": "OK",
+                                "buttons": [],
+                                "selectMenus": [],
+                                "attachments": [],
+                                "embeds": [],
+                                "reply": true,
+                                "ephemeral": false,
+                                "tts": false,
+                                "overwrite": false,
+                                "dontSend": false,
+                                "editMessage": "0",
+                                "editMessageVarName": "",
+                                "storage": "0",
+                                "varName2": "",
+                                "name": "Send Message"
+                              }
+                            ]
+                          }
+                        ],
+                        "selectMenus": [],
+                        "attachments": [],
+                        "embeds": [],
+                        "reply": true,
+                        "ephemeral": false,
+                        "tts": false,
+                        "overwrite": false,
+                        "dontSend": false,
+                        "editMessage": "0",
+                        "editMessageVarName": "",
+                        "storage": "0",
+                        "varName2": "",
+                        "name": "Send Message"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "鎖上",
+                    "type": "PRIMARY",
+                    "id": "msg-button-849c58f",
+                    "row": "1",
+                    "url": "",
+                    "emoji": "🔒",
+                    "mode": "PERSISTENT",
+                    "time": "30000",
+                    "actions": [
+                      {
+                        "member": "1",
+                        "varName": "",
+                        "role": "101",
+                        "varName2": "996261892483973170",
+                        "branch": {
+                          "iftrue": "0",
+                          "iffalse": "2",
+                          "iffalseVal": "5"
+                        },
+                        "name": "Check If Member has Role"
+                      },
+                      {
+                        "channel": "0",
+                        "varName": "",
+                        "role": "101",
+                        "varName2": "996262054266671104",
+                        "permission": "SEND_MESSAGES",
+                        "state": "2",
+                        "reason": "asd",
+                        "name": "Set Role Channel Perms"
+                      },
+                      {
+                        "channel": "0",
+                        "varName": "",
+                        "message": "${member} 鎖上了票口",
+                        "buttons": [],
+                        "selectMenus": [],
+                        "attachments": [],
+                        "embeds": [],
+                        "reply": true,
+                        "ephemeral": false,
+                        "tts": false,
+                        "overwrite": false,
+                        "dontSend": false,
+                        "editMessage": "0",
+                        "editMessageVarName": "",
+                        "storage": "0",
+                        "varName2": "",
+                        "name": "Send Message"
+                      },
+                      { "name": "End Action Sequence" },
+                      {
+                        "channel": "0",
+                        "varName": "",
+                        "message": "你沒有權限",
+                        "buttons": [],
+                        "selectMenus": [],
+                        "attachments": [],
+                        "embeds": [],
+                        "reply": true,
+                        "ephemeral": false,
+                        "tts": false,
+                        "overwrite": false,
+                        "dontSend": false,
+                        "editMessage": "0",
+                        "editMessageVarName": "",
+                        "storage": "0",
+                        "varName2": "",
+                        "name": "Send Message"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "開啟",
+                    "type": "SUCCESS",
+                    "id": "msg-button-849c58f",
+                    "row": "1",
+                    "url": "",
+                    "emoji": "🔓",
+                    "mode": "PERSISTENT",
+                    "time": "30000",
+                    "actions": [
+                      {
+                        "member": "1",
+                        "varName": "",
+                        "role": "101",
+                        "varName2": "996261892483973170",
+                        "branch": {
+                          "iftrue": "0",
+                          "iffalse": "2",
+                          "iffalseVal": "5"
+                        },
+                        "name": "Check If Member has Role"
+                      },
+                      {
+                        "channel": "0",
+                        "varName": "",
+                        "role": "101",
+                        "varName2": "996262054266671104",
+                        "permission": "SEND_MESSAGES",
+                        "state": "0",
+                        "reason": "asd",
+                        "name": "Set Role Channel Perms"
+                      },
+                      {
+                        "channel": "0",
+                        "varName": "",
+                        "message": "${member} 解鎖了票口",
+                        "buttons": [],
+                        "selectMenus": [],
+                        "attachments": [],
+                        "embeds": [],
+                        "reply": true,
+                        "ephemeral": false,
+                        "tts": false,
+                        "overwrite": false,
+                        "dontSend": false,
+                        "editMessage": "0",
+                        "editMessageVarName": "",
+                        "storage": "0",
+                        "varName2": "",
+                        "name": "Send Message"
+                      },
+                      { "name": "End Action Sequence" },
+                      {
+                        "channel": "0",
+                        "varName": "",
+                        "message": "你沒有權限",
+                        "buttons": [],
+                        "selectMenus": [],
+                        "attachments": [],
+                        "embeds": [],
+                        "reply": true,
+                        "ephemeral": false,
+                        "tts": false,
+                        "overwrite": false,
+                        "dontSend": false,
+                        "editMessage": "0",
+                        "editMessageVarName": "",
+                        "storage": "0",
+                        "varName2": "",
+                        "name": "Send Message"
+                      }
+                    ]
+                  }
+                ],
+                "selectMenus": [],
+                "attachments": [],
+                "embeds": [
+                  {
+                    "title": "歡迎來到Ticket1-${tempVars(\"ticketnum\")}",
+                    "url": "",
+                    "color": "",
+                    "timestamp": "false",
+                    "imageUrl": "",
+                    "thumbUrl": "",
+                    "description": "售後格式\n購買商品：\n問題：\n",
+                    "fields": [],
+                    "author": "",
+                    "authorUrl": "",
+                    "authorIcon": "",
+                    "footerText": "",
+                    "footerIconUrl": ""
+                  }
+                ],
+                "reply": true,
+                "ephemeral": false,
+                "tts": false,
+                "overwrite": false,
+                "dontSend": false,
+                "editMessage": "0",
+                "editMessageVarName": "",
+                "storage": "0",
+                "varName2": "",
+                "name": "Send Message"
+              },
+              { "name": "End Action Sequence" },
+              {
+                "server": "0",
+                "varName": "",
+                "dataName": "ticketnum2",
+                "defaultVal": "1",
+                "storage": "1",
+                "varName2": "ticketnum2",
+                "name": "Store Server Data"
+              },
+              {
+                "server": "0",
+                "varName": "",
+                "dataName": "ticketnum2",
+                "changeType": "1",
+                "value": "1",
+                "name": "Control Server Data"
+              },
+              {
+                "channelName": "詢問問題-${tempVars(\"ticketnum2\")}",
+                "topic": "asasas",
+                "position": "",
+                "storage": "1",
+                "varName": "channel 2",
+                "categoryID": "1072000859493388369",
+                "reason": "h",
+                "name": "Create Text Channel"
+              },
+              {
+                "storage": "3",
+                "varName": "channel 2",
+                "permission": "VIEW_CHANNEL",
+                "state": "1",
+                "reason": "",
+                "name": "Set Channel Permissions"
+              },
+              {
+                "channel": "3",
+                "varName": "channel 2",
+                "member": "1",
+                "varName2": "",
+                "permission": "VIEW_CHANNEL",
+                "state": "0",
+                "reason": "h",
+                "name": "Set Member Channel Perms"
+              },
+              {
+                "channel": "3",
+                "varName": "channel 2",
+                "role": "101",
+                "varName2": "996261892483973170",
+                "permission": "VIEW_CHANNEL",
+                "state": "0",
+                "reason": "h",
+                "name": "Set Role Channel Perms"
+              },
+              {
+                "channel": "5",
+                "varName": "channel 2",
+                "message": "",
+                "buttons": [
+                  {
+                    "name": "關閉",
+                    "type": "DANGER",
+                    "id": "msg-button-92317c5",
+                    "row": "1",
+                    "url": "",
+                    "emoji": "",
+                    "mode": "PERSISTENT",
+                    "time": "30000",
+                    "actions": [
+                      {
+                        "channel": "0",
+                        "varName": "",
+                        "message": "你確定!?",
+                        "buttons": [
+                          {
+                            "name": "Yes",
+                            "type": "DANGER",
+                            "id": "msg-button-35f9e0b",
+                            "row": "1",
+                            "url": "",
+                            "emoji": "",
+                            "mode": "MULTI",
+                            "time": "",
+                            "actions": [
+                              {
+                                "storage": "0",
+                                "varName": "",
+                                "reason": "h",
+                                "name": "Delete Channel"
+                              }
+                            ]
+                          },
+                          {
+                            "name": "No",
+                            "type": "SUCCESS",
+                            "id": "msg-button-d4cf114",
+                            "row": "",
+                            "url": "",
+                            "emoji": "",
+                            "mode": "MULTI",
+                            "time": "",
+                            "actions": [
+                              {
+                                "channel": "0",
+                                "varName": "",
+                                "message": "OK",
+                                "buttons": [],
+                                "selectMenus": [],
+                                "attachments": [],
+                                "embeds": [],
+                                "reply": true,
+                                "ephemeral": false,
+                                "tts": false,
+                                "overwrite": false,
+                                "dontSend": false,
+                                "editMessage": "0",
+                                "editMessageVarName": "",
+                                "storage": "0",
+                                "varName2": "",
+                                "name": "Send Message"
+                              }
+                            ]
+                          }
+                        ],
+                        "selectMenus": [],
+                        "attachments": [],
+                        "embeds": [],
+                        "reply": true,
+                        "ephemeral": false,
+                        "tts": false,
+                        "overwrite": false,
+                        "dontSend": false,
+                        "editMessage": "0",
+                        "editMessageVarName": "",
+                        "storage": "0",
+                        "varName2": "",
+                        "name": "Send Message"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "鎖上",
+                    "type": "PRIMARY",
+                    "id": "msg-button-bf1045f",
+                    "row": "1",
+                    "url": "",
+                    "emoji": "🔒",
+                    "mode": "PERSISTENT",
+                    "time": "30000",
+                    "actions": [
+                      {
+                        "member": "1",
+                        "varName": "",
+                        "role": "101",
+                        "varName2": "996261892483973170",
+                        "branch": {
+                          "iftrue": "0",
+                          "iffalse": "2",
+                          "iffalseVal": "5"
+                        },
+                        "name": "Check If Member has Role"
+                      },
+                      {
+                        "channel": "0",
+                        "varName": "",
+                        "role": "101",
+                        "varName2": "996262054266671104",
+                        "permission": "SEND_MESSAGES",
+                        "state": "2",
+                        "reason": "asd",
+                        "name": "Set Role Channel Perms"
+                      },
+                      {
+                        "channel": "0",
+                        "varName": "",
+                        "message": "${member} 鎖上了票口",
+                        "buttons": [],
+                        "selectMenus": [],
+                        "attachments": [],
+                        "embeds": [],
+                        "reply": true,
+                        "ephemeral": false,
+                        "tts": false,
+                        "overwrite": false,
+                        "dontSend": false,
+                        "editMessage": "0",
+                        "editMessageVarName": "",
+                        "storage": "0",
+                        "varName2": "",
+                        "name": "Send Message"
+                      },
+                      { "name": "End Action Sequence" },
+                      {
+                        "channel": "0",
+                        "varName": "",
+                        "message": "你沒有權限",
+                        "buttons": [],
+                        "selectMenus": [],
+                        "attachments": [],
+                        "embeds": [],
+                        "reply": true,
+                        "ephemeral": false,
+                        "tts": false,
+                        "overwrite": false,
+                        "dontSend": false,
+                        "editMessage": "0",
+                        "editMessageVarName": "",
+                        "storage": "0",
+                        "varName2": "",
+                        "name": "Send Message"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "開啟",
+                    "type": "SUCCESS",
+                    "id": "msg-button-3fee3d0",
+                    "row": "1",
+                    "url": "",
+                    "emoji": "🔓",
+                    "mode": "PERSISTENT",
+                    "time": "30000",
+                    "actions": [
+                      {
+                        "member": "1",
+                        "varName": "",
+                        "role": "101",
+                        "varName2": "996261892483973170",
+                        "branch": {
+                          "iftrue": "0",
+                          "iffalse": "2",
+                          "iffalseVal": "5"
+                        },
+                        "name": "Check If Member has Role"
+                      },
+                      {
+                        "channel": "0",
+                        "varName": "",
+                        "role": "101",
+                        "varName2": "996262054266671104",
+                        "permission": "SEND_MESSAGES",
+                        "state": "0",
+                        "reason": "asd",
+                        "name": "Set Role Channel Perms"
+                      },
+                      {
+                        "channel": "0",
+                        "varName": "",
+                        "message": "${member} 解鎖了票口",
+                        "buttons": [],
+                        "selectMenus": [],
+                        "attachments": [],
+                        "embeds": [],
+                        "reply": true,
+                        "ephemeral": false,
+                        "tts": false,
+                        "overwrite": false,
+                        "dontSend": false,
+                        "editMessage": "0",
+                        "editMessageVarName": "",
+                        "storage": "0",
+                        "varName2": "",
+                        "name": "Send Message"
+                      },
+                      { "name": "End Action Sequence" },
+                      {
+                        "channel": "0",
+                        "varName": "",
+                        "message": "你沒有權限",
+                        "buttons": [],
+                        "selectMenus": [],
+                        "attachments": [],
+                        "embeds": [],
+                        "reply": true,
+                        "ephemeral": false,
+                        "tts": false,
+                        "overwrite": false,
+                        "dontSend": false,
+                        "editMessage": "0",
+                        "editMessageVarName": "",
+                        "storage": "0",
+                        "varName2": "",
+                        "name": "Send Message"
+                      }
+                    ]
+                  }
+                ],
+                "selectMenus": [],
+                "attachments": [],
+                "embeds": [
+                  {
+                    "title": "歡迎來到Ticket1-${tempVars(\"ticketnum\")}",
+                    "url": "",
+                    "color": "",
+                    "timestamp": "false",
+                    "imageUrl": "",
+                    "thumbUrl": "",
+                    "description": "售後格式\n購買商品：\n問題：\n",
+                    "fields": [],
+                    "author": "",
+                    "authorUrl": "",
+                    "authorIcon": "",
+                    "footerText": "",
+                    "footerIconUrl": ""
+                  }
+                ],
+                "reply": true,
+                "ephemeral": false,
+                "tts": false,
+                "overwrite": false,
+                "dontSend": false,
+                "editMessage": "0",
+                "editMessageVarName": "",
+                "storage": "0",
+                "varName2": "",
+                "name": "Send Message"
+              },
+              { "name": "End Action Sequence" },
+              {
+                "server": "0",
+                "varName": "",
+                "dataName": "ticketnum3",
+                "defaultVal": "1",
+                "storage": "1",
+                "varName2": "ticketnum3",
+                "name": "Store Server Data"
+              },
+              {
+                "server": "0",
+                "varName": "",
+                "dataName": "ticketnum3",
+                "changeType": "1",
+                "value": "1",
+                "name": "Control Server Data"
+              },
+              {
+                "channelName": "購買商品-${tempVars(\"ticketnum3\")}",
+                "topic": "asasas",
+                "position": "",
+                "storage": "1",
+                "varName": "channel 3",
+                "categoryID": "1072000859493388369",
+                "reason": "h",
+                "name": "Create Text Channel"
+              },
+              {
+                "storage": "3",
+                "varName": "channel 3",
+                "permission": "VIEW_CHANNEL",
+                "state": "1",
+                "reason": "",
+                "name": "Set Channel Permissions"
+              },
+              {
+                "channel": "3",
+                "varName": "channel 3",
+                "member": "1",
+                "varName2": "",
+                "permission": "VIEW_CHANNEL",
+                "state": "0",
+                "reason": "h",
+                "name": "Set Member Channel Perms"
+              },
+              {
+                "channel": "3",
+                "varName": "channel 3",
+                "role": "101",
+                "varName2": "996261892483973170",
+                "permission": "VIEW_CHANNEL",
+                "state": "0",
+                "reason": "h",
+                "name": "Set Role Channel Perms"
+              },
+              {
+                "channel": "5",
+                "varName": "channel 3",
+                "message": "",
+                "buttons": [
+                  {
+                    "name": "關閉",
+                    "type": "DANGER",
+                    "id": "msg-button-644114c",
+                    "row": "1",
+                    "url": "",
+                    "emoji": "",
+                    "mode": "PERSISTENT",
+                    "time": "30000",
+                    "actions": [
+                      {
+                        "channel": "0",
+                        "varName": "",
+                        "message": "你確定!?",
+                        "buttons": [
+                          {
+                            "name": "Yes",
+                            "type": "DANGER",
+                            "id": "msg-button-35f9e0b",
+                            "row": "1",
+                            "url": "",
+                            "emoji": "",
+                            "mode": "MULTI",
+                            "time": "",
+                            "actions": [
+                              {
+                                "storage": "0",
+                                "varName": "",
+                                "reason": "h",
+                                "name": "Delete Channel"
+                              }
+                            ]
+                          },
+                          {
+                            "name": "No",
+                            "type": "SUCCESS",
+                            "id": "msg-button-d4cf114",
+                            "row": "",
+                            "url": "",
+                            "emoji": "",
+                            "mode": "MULTI",
+                            "time": "",
+                            "actions": [
+                              {
+                                "channel": "0",
+                                "varName": "",
+                                "message": "OK",
+                                "buttons": [],
+                                "selectMenus": [],
+                                "attachments": [],
+                                "embeds": [],
+                                "reply": true,
+                                "ephemeral": false,
+                                "tts": false,
+                                "overwrite": false,
+                                "dontSend": false,
+                                "editMessage": "0",
+                                "editMessageVarName": "",
+                                "storage": "0",
+                                "varName2": "",
+                                "name": "Send Message"
+                              }
+                            ]
+                          }
+                        ],
+                        "selectMenus": [],
+                        "attachments": [],
+                        "embeds": [],
+                        "reply": true,
+                        "ephemeral": false,
+                        "tts": false,
+                        "overwrite": false,
+                        "dontSend": false,
+                        "editMessage": "0",
+                        "editMessageVarName": "",
+                        "storage": "0",
+                        "varName2": "",
+                        "name": "Send Message"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "鎖上",
+                    "type": "PRIMARY",
+                    "id": "msg-button-125579a",
+                    "row": "1",
+                    "url": "",
+                    "emoji": "🔒",
+                    "mode": "PERSISTENT",
+                    "time": "30000",
+                    "actions": [
+                      {
+                        "member": "1",
+                        "varName": "",
+                        "role": "101",
+                        "varName2": "996261892483973170",
+                        "branch": {
+                          "iftrue": "0",
+                          "iffalse": "2",
+                          "iffalseVal": "5"
+                        },
+                        "name": "Check If Member has Role"
+                      },
+                      {
+                        "channel": "0",
+                        "varName": "",
+                        "role": "101",
+                        "varName2": "996262054266671104",
+                        "permission": "SEND_MESSAGES",
+                        "state": "2",
+                        "reason": "asd",
+                        "name": "Set Role Channel Perms"
+                      },
+                      {
+                        "channel": "0",
+                        "varName": "",
+                        "message": "${member} 鎖上了票口",
+                        "buttons": [],
+                        "selectMenus": [],
+                        "attachments": [],
+                        "embeds": [],
+                        "reply": true,
+                        "ephemeral": false,
+                        "tts": false,
+                        "overwrite": false,
+                        "dontSend": false,
+                        "editMessage": "0",
+                        "editMessageVarName": "",
+                        "storage": "0",
+                        "varName2": "",
+                        "name": "Send Message"
+                      },
+                      { "name": "End Action Sequence" },
+                      {
+                        "channel": "0",
+                        "varName": "",
+                        "message": "你沒有權限",
+                        "buttons": [],
+                        "selectMenus": [],
+                        "attachments": [],
+                        "embeds": [],
+                        "reply": true,
+                        "ephemeral": false,
+                        "tts": false,
+                        "overwrite": false,
+                        "dontSend": false,
+                        "editMessage": "0",
+                        "editMessageVarName": "",
+                        "storage": "0",
+                        "varName2": "",
+                        "name": "Send Message"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "開啟",
+                    "type": "SUCCESS",
+                    "id": "msg-button-805f172",
+                    "row": "1",
+                    "url": "",
+                    "emoji": "🔓",
+                    "mode": "PERSISTENT",
+                    "time": "30000",
+                    "actions": [
+                      {
+                        "member": "1",
+                        "varName": "",
+                        "role": "101",
+                        "varName2": "996261892483973170",
+                        "branch": {
+                          "iftrue": "0",
+                          "iffalse": "2",
+                          "iffalseVal": "5"
+                        },
+                        "name": "Check If Member has Role"
+                      },
+                      {
+                        "channel": "0",
+                        "varName": "",
+                        "role": "101",
+                        "varName2": "996262054266671104",
+                        "permission": "SEND_MESSAGES",
+                        "state": "0",
+                        "reason": "asd",
+                        "name": "Set Role Channel Perms"
+                      },
+                      {
+                        "channel": "0",
+                        "varName": "",
+                        "message": "${member} 解鎖了票口",
+                        "buttons": [],
+                        "selectMenus": [],
+                        "attachments": [],
+                        "embeds": [],
+                        "reply": true,
+                        "ephemeral": false,
+                        "tts": false,
+                        "overwrite": false,
+                        "dontSend": false,
+                        "editMessage": "0",
+                        "editMessageVarName": "",
+                        "storage": "0",
+                        "varName2": "",
+                        "name": "Send Message"
+                      },
+                      { "name": "End Action Sequence" },
+                      {
+                        "channel": "0",
+                        "varName": "",
+                        "message": "你沒有權限",
+                        "buttons": [],
+                        "selectMenus": [],
+                        "attachments": [],
+                        "embeds": [],
+                        "reply": true,
+                        "ephemeral": false,
+                        "tts": false,
+                        "overwrite": false,
+                        "dontSend": false,
+                        "editMessage": "0",
+                        "editMessageVarName": "",
+                        "storage": "0",
+                        "varName2": "",
+                        "name": "Send Message"
+                      }
+                    ]
+                  }
+                ],
+                "selectMenus": [],
+                "attachments": [],
+                "embeds": [
+                  {
+                    "title": "歡迎來到Ticket1-${tempVars(\"ticketnum\")}",
+                    "url": "",
+                    "color": "",
+                    "timestamp": "false",
+                    "imageUrl": "",
+                    "thumbUrl": "",
+                    "description": "售後格式\n購買商品：\n問題：\n",
+                    "fields": [],
+                    "author": "",
+                    "authorUrl": "",
+                    "authorIcon": "",
+                    "footerText": "",
+                    "footerIconUrl": ""
+                  }
+                ],
+                "reply": true,
+                "ephemeral": false,
+                "tts": false,
+                "overwrite": false,
+                "dontSend": false,
+                "editMessage": "0",
+                "editMessageVarName": "",
+                "storage": "0",
+                "varName2": "",
+                "name": "Send Message"
+              },
+              { "name": "End Action Sequence" }
+            ]
+          }
+        ],
+        "attachments": [],
+        "embeds": [
+          {
+            "title": "【大麻商城】",
+            "url": "",
+            "color": "",
+            "timestamp": "false",
+            "imageUrl": "",
+            "thumbUrl": "",
+            "description": "票口詢問\n開啟票口後輸入需要的商品名稱 將有專人為您服務",
+            "fields": [],
+            "author": "",
+            "authorUrl": "",
+            "authorIcon": "",
+            "footerText": "",
+            "footerIconUrl": ""
+          }
+        ],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      }
+    ],
+    "comType": "0"
+  },
+  {
+    "name": "giveaway",
+    "permissions": "ADMINISTRATOR",
+    "permissions2": "NONE",
+    "restriction": "1",
+    "_id": "AgojR",
+    "actions": [
+      {
+        "channel": "8",
+        "varName": "channel",
+        "message": "🎉 **Giveaway!** 🎉\n\n🎁獎品: **${slashParams(\"prize\")}**\n\n⏱️結束時間: ${slashParams(\"duration\")} 小時\n\n`點擊下方的按鈕即可參加抽獎`\n",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "1",
+        "varName2": "msg",
+        "name": "Send Message"
+      },
+      {
+        "storage": "1",
+        "varName": "msg",
+        "emoji": "4",
+        "varName2": "✅",
+        "varName3": "",
+        "name": "Add Reaction"
+      },
+      {
+        "time": "${slashParams(\"duration\")}",
+        "measurement": "1",
+        "name": "Wait"
+      },
+      {
+        "message": "1",
+        "varName": "msg",
+        "info": "1",
+        "find": "✅",
+        "storage": "1",
+        "varName2": "reaction",
+        "name": "Find Reaction"
+      },
+      {
+        "reaction": "1",
+        "varName": "reaction",
+        "info": "6",
+        "storage": "1",
+        "varName2": "winner",
+        "name": "Store Reaction Info"
+      },
+      {
+        "member": "2",
+        "varName": "winner",
+        "info": "0",
+        "varName2": "",
+        "iftrue": "2",
+        "iftrueVal": "5",
+        "iffalse": "0",
+        "iffalseVal": "",
+        "name": "Check If Member"
+      },
+      {
+        "storage": "1",
+        "varName": "msg",
+        "message": "🎉**恭喜中獎者!**🎉\n\n🙌 恭喜: ${tempVars(\"winner\")}\n\n🎁 抽中: ${slashParams(\"prize\")}",
+        "name": "Edit Message"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "${tempVars(\"winner\")} 你抽中了禮物！請開啟 <#1072001263560048670>",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      }
+    ],
+    "comType": "4",
+    "parameters": [
+      {
+        "name": "prize",
+        "description": "獎品",
+        "type": "STRING",
+        "required": true,
+        "choices": null
+      },
+      {
+        "name": "duration",
+        "description": "持續時間(小時為單位)",
+        "type": "INTEGER",
+        "required": true,
+        "choices": null
+      },
+      {
+        "name": "channel",
+        "description": "頻道",
+        "type": "CHANNEL",
+        "required": true,
+        "choices": null
+      }
+    ],
+    "description": "抽獎"
+  },
+  {
+    "name": "verify",
+    "permissions": "NONE",
+    "permissions2": "NONE",
+    "restriction": "1",
+    "_id": "bCFvT",
+    "actions": [
+      {
+        "storage": "1",
+        "varName": "num1",
+        "min": "1",
+        "max": "20",
+        "name": "Generate Random Number"
+      },
+      {
+        "storage": "1",
+        "varName": "num2",
+        "min": "1",
+        "max": "20",
+        "name": "Generate Random Number"
+      },
+      {
+        "FirstNumber": "${tempVars(\"num1\")}",
+        "info": "1",
+        "SecondNumber": "${tempVars(\"num2\")}",
+        "storage": "1",
+        "varName": "answer",
+        "name": "Basic Math Operation"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "**Verify**\n> 回答這個問題\n> `${tempVars(\"num1\")} - ${tempVars(\"num2\")}`",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "storage": "0",
+        "varName": "",
+        "filter": " content === '${tempVars(\"answer\")}'",
+        "max": "1",
+        "time": "15000",
+        "iftrue": "0",
+        "iftrueVal": "",
+        "iffalse": "2",
+        "iffalseVal": "9",
+        "storage2": "1",
+        "varName2": "response",
+        "name": "Await Response Call Action"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "你答對了!",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "member": "1",
+        "varName2": "",
+        "role": "101",
+        "varName": "996262054266671104",
+        "reason": "",
+        "name": "Add Member Role"
+      },
+      { "name": "End Action Sequence" },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "你做錯了! 😢",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      }
+    ],
+    "comType": "4",
+    "description": "驗證"
+  }
+]
